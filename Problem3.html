@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Replace all href values</title>
+</head>
+<body>
+	<a href="https://www.google.com">google</a>
+	<a href="https://www.facebook.com">facebook</a>	
+	<script type="text/javascript">
+		let a = document.querySelectorAll("a");
+		for (let _i of a) {
+			_i.href = "https://www.youtube.com/";
+		}
+	</script>
+</body>
+</html>

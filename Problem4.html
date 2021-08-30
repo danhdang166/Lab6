@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Compare Array of Objects</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let products = [
+			{
+				ProductName: "SamSung A7",
+				ProductImage : "https://cdn.tgdd.vn/Products/Images/42/236128/samsung-galaxy-s21-plus-256gb-bac-600x600-600x600.jpg",
+				ProductPrice : 2000
+			}, 
+			{
+				ProductName: "Iphone 11",
+				ProductImage : "https://cdn.tgdd.vn/Products/Images/42/153856/iphone-xi-do-600x600.jpg",
+				ProductPrice : 3000
+			}, 
+			{
+				ProductName: "SamSung Ultra",
+				ProductImage : "https://cdn.tgdd.vn/Products/Images/42/236128/samsung-galaxy-s21-plus-256gb-bac-600x600-600x600.jpg",
+				ProductPrice : 2200
+			}
+		];
+		function print(array) {
+			for (let i = 0; i <array.length; i++) {
+				console.log(array[i]);
+			}
+			console.log('');
+		}
+		function compare(a,b) {
+			if (a.ProductPrice < b.ProductPrice) {
+				return -1 ;
+			}
+			if (a.ProductPrice > b.ProductPrice) {
+				return 1 ;
+			}
+			return 0;
+		}
+		print(products);
+		products.sort(compare);
+		print(products);
+
+	</script>
+</body>
+</html>

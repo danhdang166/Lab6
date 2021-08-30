@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Parsing numbers</title>
+</head>
+<body>
+	<table border="1" cellpadding="10px">
+		<thead>
+			<tr>
+				<th>str</th>
+				<th>parseInt(str)</th>
+				<th>parseFloat(str)</th>
+				<th>Number(str)</th>
+				<th>+str</th>
+				<th>str | 0</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td id="col-1.0">1234</td>
+				<td id="col-1.1"></td>
+				<td id="col-1.2"></td>
+				<td id="col-1.3"></td>
+				<td id="col-1.4"></td>
+				<td id="col-1.5"></td>
+			</tr>
+			<tr>
+				<td id="col-2.0">1238abc</td>
+				<td id="col-2.1"></td>
+				<td id="col-2.2"></td>
+				<td id="col-2.3"></td>
+				<td id="col-2.4"></td>
+				<td id="col-2.5"></td>
+			</tr>
+			<tr>
+				<td id="col-3.0">0.15</td>
+				<td id="col-3.1"></td>
+				<td id="col-3.2"></td>
+				<td id="col-3.3"></td>
+				<td id="col-3.4"></td>
+				<td id="col-3.5"></td>
+			</tr>
+			<tr>
+				<td id="col-4.0">3.14ivan</td>
+				<td id="col-4.1"></td>
+				<td id="col-4.2"></td>
+				<td id="col-4.3"></td>
+				<td id="col-4.4"></td>
+				<td id="col-4.5"></td>
+			</tr>
+			<tr>
+				<td id="col-5.0">Infinity</td>
+				<td id="col-5.1"></td>
+				<td id="col-5.2"></td>
+				<td id="col-5.3"></td>
+				<td id="col-5.4"></td>
+				<td id="col-5.5"></td>
+			</tr>
+			<tr>
+				<td id="col-6.0">99999999999999999999</td>
+				<td id="col-6.1"></td>
+				<td id="col-6.2"></td>
+				<td id="col-6.3"></td>
+				<td id="col-6.4"></td>
+				<td id="col-6.5"></td>
+			</tr>
+		</tbody>
+	</table>
+	<script type="text/javascript">
+		let c1 = document.getElementById('col-1.0').innerHTML;
+		document.getElementById('col-1.1').innerHTML = parseInt(c1);
+		document.getElementById('col-1.2').innerHTML = parseFloat(c1);
+		document.getElementById('col-1.3').innerHTML = Number(c1);
+		document.getElementById('col-1.4').innerHTML = +c1;
+		document.getElementById('col-1.5').innerHTML = c1 | 0;
+		let c2 = document.getElementById('col-2.0').innerHTML;
+		document.getElementById('col-2.1').innerHTML = parseInt(c2);
+		document.getElementById('col-2.2').innerHTML = parseFloat(c2);
+		document.getElementById('col-2.3').innerHTML = Number(c2);
+		document.getElementById('col-2.4').innerHTML = +c2;
+		document.getElementById('col-2.5').innerHTML = c2 | 0;
+		let c3 = document.getElementById('col-3.0').innerHTML;
+		document.getElementById('col-3.1').innerHTML = parseInt(c3);
+		document.getElementById('col-3.2').innerHTML = parseFloat(c3);
+		document.getElementById('col-3.3').innerHTML = Number(c3);
+		document.getElementById('col-3.4').innerHTML = +c3;
+		document.getElementById('col-3.5').innerHTML = c3 | 0;
+		let c4 = document.getElementById('col-4.0').innerHTML;
+		document.getElementById('col-4.1').innerHTML = parseInt(c4);
+		document.getElementById('col-4.2').innerHTML = parseFloat(c4);
+		document.getElementById('col-4.3').innerHTML = Number(c4);
+		document.getElementById('col-4.4').innerHTML = +c4;
+		document.getElementById('col-4.5').innerHTML = c4 | 0;
+		let c5 = document.getElementById('col-5.0').innerHTML;
+		document.getElementById('col-5.1').innerHTML = parseInt(c5);
+		document.getElementById('col-5.2').innerHTML = parseFloat(c5);
+		document.getElementById('col-5.3').innerHTML = Number(c5);
+		document.getElementById('col-5.4').innerHTML = +c5;
+		document.getElementById('col-5.5').innerHTML = c5 | 0;
+		let c6 = document.getElementById('col-6.0').innerHTML;
+		document.getElementById('col-6.1').innerHTML = parseInt(c6);
+		document.getElementById('col-6.2').innerHTML = parseFloat(c6);
+		document.getElementById('col-6.3').innerHTML = Number(c6);
+		document.getElementById('col-6.4').innerHTML = +c6;
+		document.getElementById('col-6.5').innerHTML = c6 | 0;
+	</script>
+</body>
+</html>

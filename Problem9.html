@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Selection Sort</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		let integerArray = [2,7,22,565,77,334,73,22,99];
+
+		function print(array) {
+			for (let i = 0; i <array.length; i++) {
+				document.write(array[i] + " ");
+			}
+		}
+
+		function selectionSort(array) {
+   			let index = 0;
+    		for (let i = 0; i < array.length; i++) {
+       			index = i;
+       			for (let j = i + 1; j < array.length; j++) {
+           			 if (array[index] > array[j]) {
+               		 index = j;
+           			}
+        		}
+	        	if (i !== index) {
+		            let temp = array[i];
+		            array[i] = array[index];
+		            array[index] = temp;
+	        	}
+	        }
+        	return array;
+    	}
+    	let newArray = selectionSort(integerArray);
+    	print(newArray);
+
+	</script>
+</body>
+</html>
